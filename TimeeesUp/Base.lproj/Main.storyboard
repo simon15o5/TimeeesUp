@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimeeesUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9N-0c-5Nc">
+                                <rect key="frame" x="147.5" y="728" width="119" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Start Timer">
+                                    <color key="titleColor" red="0.23529411764705882" green="0.25490196078431371" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rqe-1s-yqC"/>
+                                </connections>
+                            </button>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f8J-aA-i6n">
+                                <rect key="frame" x="132" y="636" width="150" height="4"/>
+                            </progressView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06:58" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gY-XX-A1i">
+                                <rect key="frame" x="128.5" y="355" width="157" height="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="59"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfU-Zq-JTy">
+                                <rect key="frame" x="0.0" y="91" width="414" height="216"/>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.82745098039215681" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="v9N-0c-5Nc" firstAttribute="top" secondItem="f8J-aA-i6n" secondAttribute="bottom" constant="88" id="6vi-Uo-wj9"/>
+                            <constraint firstItem="v9N-0c-5Nc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9WT-xJ-JQL"/>
+                            <constraint firstItem="f8J-aA-i6n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="BXR-uw-DvA"/>
+                            <constraint firstItem="f8J-aA-i6n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HKY-9V-6Jk"/>
+                            <constraint firstItem="1gY-XX-A1i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MKy-7I-fr4"/>
+                            <constraint firstItem="IfU-Zq-JTy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QtG-5i-muk"/>
+                            <constraint firstItem="IfU-Zq-JTy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="Yma-Og-g1H"/>
+                            <constraint firstItem="IfU-Zq-JTy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dk2-6E-c1z"/>
+                            <constraint firstItem="f8J-aA-i6n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ePR-J9-Ok9"/>
+                            <constraint firstItem="f8J-aA-i6n" firstAttribute="top" secondItem="1gY-XX-A1i" secondAttribute="bottom" constant="210" id="exV-0I-d1N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v9N-0c-5Nc" secondAttribute="bottom" constant="92" id="u5y-K9-wi4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timeField" destination="IfU-Zq-JTy" id="Kzt-a0-JAh"/>
+                        <outlet property="timeLabel" destination="1gY-XX-A1i" id="iad-g8-xcb"/>
+                        <outlet property="timerProgress" destination="8bC-Xf-vdC" id="jFH-eW-7j3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+</document>
