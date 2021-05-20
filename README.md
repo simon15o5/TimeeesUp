@@ -1,0 +1,3 @@
+This is just a simple timer-app. I learnt to work with the IOS-built-in Timer, and with sounds.
+Enjoy...
+
